@@ -19,8 +19,7 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(libtorch)
 
-# Set CMAKE_PREFIX_PATH to the libtorch directory so find_package can locate Torch
-set(CMAKE_PREFIX_PATH ${libtorch_SOURCE_DIR})
+set(Torch_DIR "${libtorch_SOURCE_DIR}/share/cmake/Torch")
 
 # Find the Torch package
 find_package(Torch REQUIRED)
